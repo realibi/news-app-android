@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "287467129884",
+    "firebase_url": "https://android-news-fbcf2.firebaseio.com",
+    "project_id": "android-news-fbcf2",
+    "storage_bucket": "android-news-fbcf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287467129884:android:79a9a0c9a07a544881a3d9",
+        "android_client_info": {
+          "package_name": "kz.realibi.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287467129884-a0fhk5vsq7pld12gm8sr5golod898ggn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kz.realibi.news",
+            "certificate_hash": "d5117add2edcf4858d6ea9db5c209c6e30571a38"
+          }
+        },
+        {
+          "client_id": "287467129884-31u7uiv24r8dar2qdjg00kcskr22sdmr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg9PJ1jCrxK1TWdi5nwvY-o8A-zyFmReA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287467129884-31u7uiv24r8dar2qdjg00kcskr22sdmr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

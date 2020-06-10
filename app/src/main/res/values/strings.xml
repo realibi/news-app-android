@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="title_home">Главная</string>
+    <string name="title_new_post">Написать</string>
+    <string name="title_settings">Настройки</string>
+    <string name="news_title">Заголовок</string>
+    <string name="news_content">Содержание</string>
+    <string name="ready_btn_text">Готово</string>
+</resources>
