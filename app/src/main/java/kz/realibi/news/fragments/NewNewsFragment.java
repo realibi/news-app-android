@@ -1,6 +1,7 @@
 package kz.realibi.news.fragments;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -24,6 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import kz.realibi.news.MainActivity;
 import kz.realibi.news.R;
 
 public class NewNewsFragment extends Fragment {
@@ -50,29 +52,37 @@ public class NewNewsFragment extends Fragment {
                     String title = titleEditText.getText().toString();
                     String content = contentEditText.getText().toString();
 
-                    titleEditText.setText("");
-                    contentEditText.setText("");
+                    if(titleEditText.length() > 0 || contentEditText.length() > 0){
+                        titleEditText.setText("");
+                        contentEditText.setText("");
 
-                    Toast.makeText(view.getContext(), "Article added!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(view.getContext(), "Article added!", Toast.LENGTH_SHORT).show();
 
-                    Map<String, Object> article = new HashMap<>();
-                    article.put("title", title);
-                    article.put("content", content);
-                    article.put("likes", 0);
+                        Map<String, Object> article = new HashMap<>();
+                        article.put("title", title);
+                        article.put("content", content);
+                        article.put("likes", 0);
 
-                    FirebaseFirestore.getInstance().collection("news").add(article).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.w(TAG, "Error adding document", e);
-                        }
-                    });
+                        FirebaseFirestore.getInstance().collection("news").add(article).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error adding document", e);
+                            }
+                        });
+                    }else{
+                        Toast.makeText(getContext(), "Заполните заголовок и контент!", Toast.LENGTH_SHORT).show();
+                    }
+
+
                 }
             });
         }
+
+
     }
 }

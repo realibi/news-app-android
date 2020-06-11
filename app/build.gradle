@@ -43,4 +43,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:17.4.3'
     implementation 'androidx.room:room-runtime:2.2.5'
     annotationProcessor 'androidx.room:room-compiler:2.2.5'
+
+    implementation "com.github.akndmr:ColorPrefUtil:1.0.1"
 }

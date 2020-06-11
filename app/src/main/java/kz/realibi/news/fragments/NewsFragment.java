@@ -1,5 +1,6 @@
 package kz.realibi.news.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,7 +32,6 @@ public class NewsFragment extends Fragment {
     private List<News> mNews = new ArrayList<>();
 
     private NewsAdapter newsAdapter;
-
     private final String TAG = "NewsFragment";
 
     @Override
@@ -62,6 +62,5 @@ public class NewsFragment extends Fragment {
                         }
                     }
                 });
-
     }
 }
